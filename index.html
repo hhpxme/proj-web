@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Website</title>
+    <title>Đăng ký tài khoản</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/w3-custom.css">
@@ -28,26 +28,63 @@
             background-repeat: no-repeat;
         }
 
-        .w3-bar .w3-button {
+        .w3-bar .w3-btn {
             padding-bottom: 5px;
             padding-top: 5px;
             padding-left: 20px;
             padding-right: 20px;
         }
+
+        .popup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .popup-content {
+            width: 500px;
+            height: 750px;
+            background: #ffffff;
+            margin: 100px auto;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 3px 3px 12px #3a3a3a ;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 5px;
+            background: #222;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            line-height: 0;
+            padding: 10px 0 10px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .popup:target {
+            display: block; }
     </style>
 </head>
-<body class="w3-pale-red">
+<body class="w3-white">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <h4>
     <div class="w3-bar" id="myNavbar">
-        <a href="#" class="w3-bar-item w3-button w3-wide">Logo</a>
+        <a href="#" class="w3-ripple" style="border-radius: 75px"><img src="images/logo.png" width = 25> </a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
-            <a href="#about" class="w3-button">Giới thiệu</a>
-            <a href="#login" class="w3-button w3-red" style="border-radius: 75px">Đăng nhập</a>
-            <a href="#logout" class="w3-button w3-light-gray" style="border-radius: 75px">Đăng ký</a>
+            <a href="#about" class="w3-button" style="border-radius: 75px">Giới thiệu</a>
+            <a href="#login-popup" class="w3-button w3-sweet-red" style="border-radius: 75px">Đăng nhập</a>
+            <a href="#logout-popup" class="w3-button w3-light-gray" style="border-radius: 75px">Đăng ký</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -61,18 +98,78 @@
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16"><span><i class="fa-light fa-square-xmark"></i></span> CLOSE</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">GIỚI THIỆU</a>
-    <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
-    <a href="#logout" onclick="w3_close()" class="w3-bar-item w3-button">ĐĂNG KÝ</a>
+    <a href="#login-popup" onclick="w3_close()" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
+    <a href="#logout-popup" onclick="w3_close()" class="w3-bar-item w3-button">ĐĂNG KÝ</a>
 </nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-middle w3-text-black w3-center">
-        <span class="w3-jumbo">Nghĩ hộ cái tên - 1 chữ thôi</span><br>
-        <span class="w3-large">Khám phá thế giới của riêng bạn cùng những tấm hình độc nhất - Nghĩ hộ slogan</span>
-        <p><a href="#home" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Khám phá ngay</a></p>
+        <span class="w3-jumbo">JebrArt</span><br>
+        <span class="w3-large">Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore maga aliquam erat volutpat.</span>
+        <p><a href="#login-popup" class="w3-btn w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-red">Khám phá ngay</a></p>
     </div>
 </header>
+
+<!-- popup code -->
+<!--login-popup-->
+<div id="login-popup" class="popup" href="#">
+    <div class="popup-content w3-center">
+        <div style="padding-top: 30px">
+            <img src="images/logo.png" width="50px" height="65px">
+        </div>
+        <span>
+            <h1 style="padding-top: 10px">Chào mừng bạn đến với JebrArt</h1>
+        </span>
+        <h4>
+        <form class="w3-center" action="" style="padding-top: 25px">
+            Email
+            <br />
+            <input type="text" style="width: 250px" name="uid">
+            <br />
+            Mật khẩu
+            <br />
+            <input type="password" style="width: 250px" name="psw">
+        </form>
+        </h4>
+        <a href="#"><b>Quên mật khẩu ?</b></a>
+        <br /> <br />
+        <h4><a href="#login-popup" class="w3-btn w3-sweet-red" style="border-radius: 75px">Đăng nhập</a></h4>
+        <br />
+        Nếu bạn chưa có tài khoản
+        <a href="#logout-popup"><b><br />Nhấp vào đây để đăng ký.</b></a>
+        <a href="#" class="close">x</a>
+    </div>
+</div>
+
+<!--logout-popup-->
+<div id="logout-popup" class="popup" href="#">
+    <div class="popup-content w3-center">
+        <div style="padding-top: 30px">
+            <img src="images/logo.png" width="50px" height="65px">
+        </div>
+        <span>
+            <h1 style="padding-top: 10px">Chào mừng bạn đến với JebrArt</h1>
+        </span>
+        <h4>
+            <form class="w3-center" action="" style="padding-top: 25px">
+                Email
+                <br />
+                <input type="text" style="width: 250px" name="uid">
+                <br />
+                Mật khẩu
+                <br />
+                <input type="password" style="width: 250px" name="psw">
+            </form>
+        </h4>
+        <br />
+        <h4><a href="#login-popup" class="w3-btn w3-sweet-red" style="border-radius: 75px">Đăng ký</a></h4>
+        <br />
+        Bạn là thành viên của JebrArt
+        <a href="#login-popup"><b><br />Nhấp vào đây để đăng nhập.</b></a>
+        <a href="#" class="close">x</a>
+    </div>
+</div>
 
 <script>
     // Modal Image Gallery
