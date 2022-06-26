@@ -1,91 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>CSS Only Lightbox / Popup</title>
-  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://kit.fontawesome.com/cb9f7764ac.js" crossorigin="anonymous"></script>
 </head>
-<body>
-
 <style>
-  body {
-    background: #ddd;
-    margin: 0;
-    font-family: arial;
-    font-size: 1.2em;
-    color: #111;
+  body,h1,h2,h3,h4,h5,h6 {font-family: 'Josefin Sans', sans-serif;}
+  /* Navigation bar */
+  .nav {
+    position: relative;
+    width: 75px;
+    height: 375px;
+    background: #ffffff;
+    border-radius: 75px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
   }
 
-  .wrapper {
-    max-width: 960px;
-    margin: 10% auto;
-    text-align: center;
-    line-height: 2em;
-  }
-
-  .button {
-    border: 3px solid #111;
-    adding: 10px;
-    color: #111;
-    text-decoration: none;
-  }
-
-
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
+  .nav ul {
+    position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.6);
-    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-  #xmas-popup .popup-content{
-    width: 600px;
-    height: 600px;
-    background: #bbb;
-    margin: 100px auto;
+  .nav ul li {
     position: relative;
-    border: 5px solid #fff;
+    list-style: none;
+    width: 75px;
+    height: 75px;
+    z-index: 1;
   }
 
-  .close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    border-radius: 50%;
-    background: #222;
-    border: 3px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    line-height: 0;
-    padding: 9px 0 11px;
-    width: 20px;
+  .nav ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     text-align: center;
+    color: #3a3a3a;
+    font-weight: 400;
   }
 
-  .popup:target {
+  .nav ul li a .nav-icon{
+    position: relative;
     display: block;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  .nav ul li a .nav-icon i {
+    font-size: 24px;
+  }
+
+  .nav ul li a .nav-title {
+    position: ;
+    background: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
   }
 </style>
-
-<!-- popup code -->
-<div id="xmas-popup" class="popup" href="#">
-  <div class="popup-content">
-    <img src="popup.jpg" alt="xmas-sale" />
-    <a href="#" class="close">x</a>
+<body>
+  <div class="nav">
+    <ul>
+      <li class="list">
+        <a href="#">
+          <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+          <span class="nav-title">Trang chủ</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="nav-icon"><i class="fa-solid fa-plus"></i></span>
+          <span class="nav-title">Tạo mới</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <span class="nav-title">Tìm kiếm</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="nav-icon"><i class="fa-solid fa-user"></i></span>
+          <span class="nav-title">Hồ sơ</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="nav-icon"><i class="fa-solid fa-angle-up"></i></span>
+          <span class="nav-title">Mở rộng</span>
+        </a>
+      </li>
+    </ul>
   </div>
-</div>
-
-
-<!-- normal page code -->
-<div class="wrapper">
-  <h1>CSS Only Popup</h1>
-  <p>
-    Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore maga aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum.
-  </p>
-  <a href="#xmas-popup" class="button">Show popup</a>
-</div>
 </body>
 </html>
