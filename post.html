@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JebraArt</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/cb9f7764ac.js" crossorigin="anonymous"></script>
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: 'Josefin Sans', sans-serif;}
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .w3-button {
+      padding: 5px 10px;
+    }
+
+    .w3-dropdown-content {
+      bottom: 100px;
+      left: -40px;
+      width: 200px;
+    }
+
+    #post-popup .popup-content {
+      width: 500px;
+      height: 500px;
+    }
+
+    #post-picture {
+      height: 5px;
+      border: 1px solid #c3c3c3;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      border-radius: 10px;
+    }
+
+    .post-image {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body class="w3-white-gray">
+  <!-- Post -->
+  <div class="w3-container" id="post-popup">
+    <div class="w3-half w3-display-middle w3-display-container w3-white" style="height: 600px; border-radius: 20px; box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3)">
+      <div class="w3-half w3-center w3-panel">
+        <div class="w3-white-gray w3-display-container w3-block w3-center" id="post-picture">
+          <img src="images/img-homepage/img.jpg" class="w3-block post-image w3-display-middle">
+        </div>
+      </div>
+      <div class="w3-half w3-left w3-panel">
+        <span class="w3-xxxlarge">Tiêu đề</span><br>
+        <span class="w3-large"  style="max-height: 315px">Mô tả</span><br>
+        <span class="w3-large">Tags</span><br/>
+        <div>
+          <img src="images/img-home/avt.jpg" width="25px">
+          <span>Author</span>
+        </div><br/>
+        <div class="w3-white-gray w3-display-container w3-block w3-right" style="height: 520px; border: 1px solid #c3c3c3; border-radius: 10px;">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

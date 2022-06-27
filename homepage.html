@@ -27,6 +27,17 @@
       left: -40px;
       width: 200px;
     }
+
+    #post-popup .popup-content {
+      height: 750px;
+      width: 75%;
+    }
+
+    #post-popup .popup-content .popup-image{
+      height: auto;
+      max-height: 720px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body class="w3-white-gray">
@@ -40,11 +51,11 @@
 
   <div class="w3-panel" id="main">
     <!-- home page -->
-    <div class="w3-show" id="home-page" style="margin: 0px 32px">
+    <div class="w3-hide" id="home-page" style="margin: 0px 32px">
       <div class="w3-quarter">
         <div class="image-bar">
           <div class="w3-panel">
-            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <img href="#post-popup" src="images/img-homepage/imgg.jpg" class="image-bar-item"/>
             <span class="w3-large">Caption</span>
             <br />
             <span class="w3-large">Author</span>
@@ -137,7 +148,7 @@
         <div class="w3-half w3-center w3-panel">
             <div class="w3-white-gray w3-display-container w3-block" style="height: 520px; border-radius: 10px">
               <form action="">
-                <input aria-label="Tải lên tệp tin" type="file" id="img" name="img" accept="image/*" placeholder="AAA" style="width:100%; height: 520px; border-radius: 10px">
+                <input aria-label="Tải lên tệp tin" type="file" id="img" name="img" accept="image/*" placeholder="AAA" style="width:100%; height: 90%; border-radius: 10px">
                 <span class="w3-display-middle"><i class="fa-solid fa-upload w3-xlarge"></i><br />Nhấp vào đây để tải tệp lên</span>
               </form>
             </div>
@@ -156,30 +167,8 @@
     </div>
   </div>
 
-  <!-- Post -->
-  <div class="w3-container w3-hide" id="post">
-    <div class="w3-half w3-display-middle w3-display-container w3-white" style="height: 600px; border-radius: 20px; box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3)">
-      <div class="w3-half w3-center w3-panel">
-        <div class="w3-white-gray w3-display-container w3-block" style="height: 520px; border-radius: 10px">
-          <img src="images/img-homepage/img.jpg">
-        </div>
-      </div>
-      <div class="w3-half w3-center w3-panel">
-        <form action="">
-          <input class="w3-input w3-animate-input w3-xxxlarge" type="text" placeholder="Tiêu đề" name="caption"><br>
-          <input class="w3-input w3-animate-input w3-large" type="text" placeholder="Tags" name="tags"><br>
-          <input style="height: 315px" class="w3-input w3-animate-input w3-large" type="text" placeholder="Mô tả"></input>
-        </form>
-      </div>
-      <div class="w3-container w3-block">
-        <input type="submit" class="w3-button w3-sweet-red w3-grayscale-min w3-block" style="border-radius: 75px; margin-bottom: 16px" />
-      </div>
-    </div>
-  </div>
-  </div>
-
   <!-- Popup nav bar -->
-  <div class="nav" id = "nav-bar">
+  <div class="nav nav-bottom" id = "nav-bar">
     <ul>
       <li class="list active" >
         <a href="#home-page" onclick="open_home()">
@@ -194,7 +183,7 @@
         </a>
       </li>
       <li class="list">
-        <a href="#">
+        <a href="#post-popup">
           <span class="nav-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
           <span class="nav-title">Tìm kiếm</span>
         </a>
@@ -223,7 +212,38 @@
     </ul>
   </div>
 
-
+  <!-- Post -->
+  <div id="post-popup" class="popup w3-show" href="#">
+    <div class="popup-content w3-display-container">
+      <div class="w3-half w3-left w3-panel">
+        <img class="w3-border popup-image w3-image" src="images/img-homepage/img.jpg">
+      </div>
+      <div class="w3-half w3-display-container w3-panel">
+        <br />
+        <div class="w3-xxlarge">Tiêu đề</div>
+        <div class="w3-large">Mô tả</div>
+        <div class="w3-large">Tags</div>
+        <div class="">
+          <img src="images/img-home/avt.jpg" alt="avt_author" width="25px" height="25px">
+          <span class="w3-medium w3-padding-small">Username Author</span>
+        </div>
+        <br />
+        <div class="w3-xlarge">Bình luận:</div>
+        <div class="w3-border">
+          <img src="images/img-home/avt.jpg" alt="avt_author" width="25px" height="25px">
+          <span class="w3-medium w3-padding-small">Username comment</span>
+          <div class="w3-large w3-margin-top">Comment</div>
+        </div>
+        <br />
+        <div class="">
+          <form>
+            <input style="border-radius: 75px" class="w3-input w3-animate-input w3-medium w3-padding-small" type="text" placeholder="Bình luận của bạn">
+          </form>
+        </div>
+      </div>
+      <a href="#" class="popup_close">x</a>
+    </div>
+  </div>
 
   <!-- Active icon click -->
   <script>
