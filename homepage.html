@@ -29,7 +29,7 @@
     }
   </style>
 </head>
-<body class="w3-white">
+<body class="w3-white-gray">
   <!-- Search bar on top -->
   <!--<div class="w3-top">
     <form class="search-bar" action="">
@@ -37,107 +37,158 @@
       <button class="w3-btn w3-sweet-red w3-circle" type="submit"><i class="fas fa-magnifying-glass"></i></button>
     </form>
   </div> -->
-  <!-- Popup nav bar -->
-  <div style="margin: 16px 48px">
-    <div class="w3-quarter">
-      <div class="image-bar">
-        <div class="w3-panel">
-          <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
+
+  <div class="w3-panel" id="main">
+    <!-- home page -->
+    <div class="w3-show" id="home-page" style="margin: 0px 32px">
+      <div class="w3-quarter">
+        <div class="image-bar">
+          <div class="w3-panel">
+            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
         </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-        <div class="w3-panel">
-        <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
-        <span class="w3-large">Caption</span>
-        <br />
-        <span class="w3-large">Author</span>
       </div>
+      <div class="w3-quarter">
+        <div class="image-bar">
+          <div class="w3-panel">
+            <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="image-bar">
+          <div class="w3-panel">
+            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="image-bar">
+          <div class="w3-panel">
+            <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+          <div class="w3-panel">
+            <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
+            <span class="w3-large">Caption</span>
+            <br />
+            <span class="w3-large">Author</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="w3-quarter">
-      <div class="image-bar">
-        <div class="w3-panel">
-          <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
+
+    <!-- Create post -->
+    <div class="w3-container w3-hide" id="create-post">
+      <div class="w3-half w3-display-middle w3-display-container w3-white" style="height: 600px; border-radius: 20px; box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3)">
+        <div class="w3-half w3-center w3-panel">
+            <div class="w3-white-gray w3-display-container w3-block" style="height: 520px; border-radius: 10px">
+              <form action="">
+                <input aria-label="Tải lên tệp tin" type="file" id="img" name="img" accept="image/*" placeholder="AAA" style="width:100%; height: 520px; border-radius: 10px">
+                <span class="w3-display-middle"><i class="fa-solid fa-upload w3-xlarge"></i><br />Nhấp vào đây để tải tệp lên</span>
+              </form>
+            </div>
         </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
+        <div class="w3-half w3-center w3-panel">
+          <form action="">
+            <input class="w3-input w3-animate-input w3-xxxlarge" type="text" placeholder="Tiêu đề" name="caption"><br>
+            <input class="w3-input w3-animate-input w3-large" type="text" placeholder="Tags" name="tags"><br>
+            <input style="height: 315px" class="w3-input w3-animate-input w3-large" type="text" placeholder="Mô tả"></input>
+          </form>
         </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="image-bar">
-        <div class="w3-panel">
-          <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="image-bar">
-        <div class="w3-panel">
-          <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/imgg.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
-        </div>
-        <div class="w3-panel">
-          <img src="images/img-homepage/img.jpg" class="image-bar-item"  />
-          <span class="w3-large">Caption</span>
-          <br />
-          <span class="w3-large">Author</span>
+        <div class="w3-container w3-block">
+          <input type="submit" class="w3-button w3-sweet-red w3-grayscale-min w3-block" style="border-radius: 75px; margin-bottom: 16px" />
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Post -->
+  <div class="w3-container w3-hide" id="post">
+    <div class="w3-half w3-display-middle w3-display-container w3-white" style="height: 600px; border-radius: 20px; box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3)">
+      <div class="w3-half w3-center w3-panel">
+        <div class="w3-white-gray w3-display-container w3-block" style="height: 520px; border-radius: 10px">
+          <img src="images/img-homepage/img.jpg">
+        </div>
+      </div>
+      <div class="w3-half w3-center w3-panel">
+        <form action="">
+          <input class="w3-input w3-animate-input w3-xxxlarge" type="text" placeholder="Tiêu đề" name="caption"><br>
+          <input class="w3-input w3-animate-input w3-large" type="text" placeholder="Tags" name="tags"><br>
+          <input style="height: 315px" class="w3-input w3-animate-input w3-large" type="text" placeholder="Mô tả"></input>
+        </form>
+      </div>
+      <div class="w3-container w3-block">
+        <input type="submit" class="w3-button w3-sweet-red w3-grayscale-min w3-block" style="border-radius: 75px; margin-bottom: 16px" />
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Popup nav bar -->
   <div class="nav" id = "nav-bar">
     <ul>
-      <li class="list active hover" >
-        <a href="#">
+      <li class="list active" >
+        <a href="#home-page" onclick="open_home()">
           <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
           <span class="nav-title">Trang chủ</span>
         </a>
       </li>
       <li class="list">
-        <a href="#">
+        <a href="#create-post" onclick="open_add()">
           <span class="nav-icon"><i class="fa-solid fa-plus"></i></span>
           <span class="nav-title">Tạo mới</span>
         </a>
@@ -167,14 +218,12 @@
             <a href="#" class="w3-bar-item w3-button">Đăng xuất</a>
           </div>
         </div>
-        <!--<a onclick="myFunction()">
-          <span class="nav-icon"><i class="fa-solid fa-angle-up"></i></span>
-          <span class="nav-title">Mở rộng</span>
-        </a>-->
       </li>
       <div class="nav-indicator"></div>
     </ul>
   </div>
+
+
 
   <!-- Active icon click -->
   <script>
@@ -187,7 +236,6 @@
         }
         list[i].className = "list active";
       }
-
     }
 
     function open_list() {
@@ -196,6 +244,33 @@
         x.className += " w3-show";
       } else {
         x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function open_section(id) {
+      var sec = document.getElementById(id);
+      if (sec.className.indexOf("w3-show") == -1) {
+        sec.className = sec.className.replace("w3-hide", "w3-show");
+      } else {
+        sec.className = sec.className.replace("w3-show", "w3-hide");
+      }
+    }
+
+    function open_add() {
+      var secHome = document.getElementById("home-page")
+      var secPost = document.getElementById("create-post");
+      if (secPost.className.indexOf("w3-show") == -1) {
+        secPost.className = secPost.className.replace("w3-hide", "w3-show");
+        secHome.className = secHome.className.replace("w3-show", "w3-hide");
+      }
+    }
+
+    function open_home() {
+      var secHome = document.getElementById("home-page")
+      var secPost = document.getElementById("create-post");
+      if (secHome.className.indexOf("w3-show") == -1) {
+        secHome.className = secPost.className.replace("w3-hide", "w3-show");
+        secPost.className = secHome.className.replace("w3-show", "w3-hide");
       }
     }
 
